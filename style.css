@@ -25,6 +25,101 @@ header .brand-logo{
     margin: 0 auto;
     padding-top: 2px;
 }
+.main-nav{
+    overflow: hidden;
+    float: right;
+    padding-top: 25px;
+}
+.main-nav a {
+    float: left;
+    font-size: 16px;
+    color: #f3f3f3;
+    text-align: center;
+    text-decoration: none;
+    padding: 1px 15px;
+}
+.browse-dropdown {
+    float: left;
+    overflow: hidden;
+}
+.browse-dropdown .browse-dropbtn {
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: #f3f3f3;
+    background-color: inherit;
+    padding-right: 15px;
+    margin: 0;
+}
+.browse-dropdown .browse-dropbtn i{
+    padding: 0 5px;
+}
+.main-nav a:hover, .browse-dropdown:hover .browse-dropbtn {
+    color: #fff;
+}
+.browse-content {
+    display: none;
+    position: absolute;
+    background-color: #f3f3f3;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.browse-content a {
+    float: none;
+    color: #000;
+    padding: 8px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.browse-content a:hover {
+    background-color: #e5e5e5;
+}
+
+.browse-dropdown:hover .browse-content {
+    display: block;
+}
+.menu-dropdown {
+    float: left;
+    overflow: hidden;
+}
+.menu-dropdown .menu-dropbtn {
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: #f3f3f3;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+.menu-dropdown:hover .menu-dropbtn {
+    color: #fff;
+}
+.menu-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.menu-content a {
+    float: none;
+    color: #000;
+    padding: 8px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.menu-content a:hover {
+    background-color: #e5e5e5;
+}
+
+.menu-dropdown:hover .menu-content {
+    display: block;
+}
+/*
 .main-nav ul{
     overflow: hidden;
     display: block;
@@ -50,7 +145,9 @@ header .brand-logo{
 /*INDEX*/
 
 .index-banner{
+    position:absolute;
     width: 100%;
+    max-width: 1364px;
     height: 520px;
     background-image: url(img/banner.jpg);
     background-repeat: no-repeat;
