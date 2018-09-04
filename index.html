@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
         <title>Timelapse</title>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
         <link href="style.css" rel="stylesheet" type="text/css">
+        <link rel="STYLESHEET" type="text/css" href="style/fg_membersite.css" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
-    
     <body>
         <header>
         
@@ -26,10 +27,50 @@
                             </div>
                         </div>
                         <a href="">Guide</a>
+                        
                         <div class="menu-dropdown">
                             <button class="menu-dropbtn"><i class="fa fa-ellipsis-h"></i></button>
                             <div class="menu-content">
-                                <a href="#">Login</a>
+                                <a href="#" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</a>
+                                <div id="id01" class="modal">
+                                  <form class="modal-content animate" action="/action_page.php">
+                                    <div class="imgcontainer">
+                                      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                                      <img src="img/img_login_avatar.png" alt="Avatar" class="avatar">
+                                    </div>
+
+                                    <div class="login-container">
+                                      <label for="uname"><b>Username</b></label>
+                                      <input type="text" placeholder="Enter Username" name="uname" required>
+
+                                      <label for="psw"><b>Password</b></label>
+                                      <input type="password" placeholder="Enter Password" name="psw" required>
+
+                                      <button type="submit">Login</button>
+                                      <label>
+                                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                                      </label>
+                                    </div>
+
+                                    <div class="login-container" style="background-color:#f1f1f1">
+                                      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                                      <span class="psw"><a href="#">Forgot password?</a></span>
+                                    </div>
+                                  </form>
+                                </div>
+                                
+                                <script>
+                                    // Get the modal
+                                    var modal = document.getElementById('id01');
+
+                                    // When the user clicks anywhere outside of the modal, close it
+                                    window.onclick = function(event) {
+                                        if (event.target == modal) {
+                                            modal.style.display = "none";
+                                        }
+                                    }
+                                </script>
+                                
                                 <a href="#">Sign up</a>
                                 <a href="#">About us</a>
                             </div>
